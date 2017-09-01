@@ -17,7 +17,7 @@ marked.setOptions({
 const Output = (props: { input: string }) => {
   const markdown = marked(props.input);
   return (
-    <section
+    <div
       className="output"
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: markdown }}

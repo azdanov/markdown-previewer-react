@@ -8,16 +8,14 @@ type Props = {
 };
 
 class Input extends Component<Props> {
-  props: {
-    handleInputChange: Function,
-    input: string,
-  };
-  handleChange = (event: SyntheticKeyboardEvent<HTMLTextAreaElement>) => {
+  props: Props;
+  handleChange = (event: SyntheticInputEvent<HTMLTextAreaElement>) => {
     this.props.handleInputChange(event.currentTarget.value);
   };
   render() {
     return (
       <textarea
+        className="input"
         value={this.props.input}
         onChange={this.handleChange}
         name="input-window"

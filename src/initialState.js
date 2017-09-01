@@ -1,3 +1,5 @@
+// @flow
+
 const initialState =
   '# Welcome to my React Markdown Previewer!\n' +
   '\n' +
