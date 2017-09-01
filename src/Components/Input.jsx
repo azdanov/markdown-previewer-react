@@ -1,13 +1,13 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 
 type Props = {
   handleInputChange: Function,
   input: string,
 };
 
-class Input extends React.Component<Props> {
+class Input extends Component<Props> {
   props: {
     handleInputChange: Function,
     input: string,

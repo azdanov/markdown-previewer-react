@@ -6,23 +6,20 @@
   "author": "Anton Zdanov <akumael@gmail.com>",
   "license": "Unlicense",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
+    "watch": "webpack --watch",
+    "build:dev": "webpack -d",
     "dev": "webpack-dev-server",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:update": "jest -u",
-    "watch": "webpack --watch"
+    "test:update": "jest -u"
   },
   "dependencies": {
-    "highlight.js": "^9.12.0",
     "marked": "^0.3.6",
-    "prop-types": "latest",
     "react": "^15.6.1",
-    "react-contenteditable": "^2.0.4",
     "react-dom": "^15.6.1",
     "react-hot-loader": "next",
-    "react-lowlight": "^1.1.1",
     "webpack": "^3.5.5"
   },
   "devDependencies": {

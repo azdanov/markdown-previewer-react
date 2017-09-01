@@ -1,15 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+const config = {
   context: __dirname,
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './src/index.jsx',
-  ],
-  devtool: 'cheap-eval-source-map',
+  entry: ['./src/index.jsx'],
+  devtool:
+    process.env.NODE_ENV === 'development' ? 'cheap-eval-source-map' : false,
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
@@ -19,6 +15,8 @@ module.exports = {
     hot: true,
     publicPath: '/public/',
     historyApiFallback: true,
+    contentBase: [path.join(__dirname, 'public'), path.join(__dirname)],
+    watchContentBase: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -47,3 +45,13 @@ module.exports = {
     ],
   },
 };
+
+if (process.env.NODE_ENV === 'development') {
+  config.entry.unshift(
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+  );
+}
+
+module.exports = config;

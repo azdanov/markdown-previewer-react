@@ -5,10 +5,10 @@ import Header from './Header';
 import Main from './Main';
 
 const App = () => (
-  <div className="container">
+  <main className="container">
     <Header />
     <Main />
-  </div>
+  </main>
 );
 
 export default App;

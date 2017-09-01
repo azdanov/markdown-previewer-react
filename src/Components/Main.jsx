@@ -1,16 +1,17 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 import Input from './Input';
 import Output from './Output';
+import initialState from '../initialState';
 
 type State = {
   input: string,
 };
 
-class App extends React.Component<any, State> {
+class App extends Component<any, State> {
   state = {
-    input: '',
+    input: initialState,
   };
 
   handleInputChange = (input: string) => {

@@ -1,7 +1,16 @@
+html,
+body {
+  font-size: 20px;
+  line-height: 26px;
+}
+
 #app {
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+header {
+  margin-top: 20px;
 }
 
 header h1 {
@@ -18,5 +27,37 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 90%;
+}
+
+.output {
+  margin-top: 20px;
+}
+
+.output img {
+  width: 100%;
+}
+
+.output pre {
+  white-space: pre-wrap;
+}
+
+@media (min-width: 768px) {
+  .output img {
+    width: 50%;
+  }
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
 }
