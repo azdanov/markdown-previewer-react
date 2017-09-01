@@ -1,18 +1,14 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
+import Header from './Header';
+import Main from './Main';
 
-class App extends Component {
-  state = {
-    input: '',
-  };
-  render() {
-    return (
-      <div>
-        <h1>Hello</h1>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="container">
+    <Header />
+    <Main />
+  </div>
+);
 
 export default App;
