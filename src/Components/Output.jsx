@@ -3,8 +3,15 @@
 import React from 'react';
 import marked from 'marked';
 
+const renderer = new marked.Renderer();
+renderer.link = (href, title, text) =>
+  `<a href="${href}" alt="${text}" target="_blank" rel="noopener">${text}</a>`;
+
+renderer.image = (href, title) =>
+  `<div class='image'><img src=${href} alt=${title}></div>`;
+
 marked.setOptions({
-  renderer: new marked.Renderer(),
+  renderer,
   gfm: true,
   tables: true,
   breaks: true,

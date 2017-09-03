@@ -4,6 +4,24 @@ body {
   line-height: 26px;
 }
 
+body {
+  background-image: -webkit-linear-gradient(180deg, #8bc6ec 0%, #9599e2 100%);
+  background-image: -moz-linear-gradient(180deg, #8bc6ec 0%, #9599e2 100%);
+  background-image: -o-linear-gradient(180deg, #8bc6ec 0%, #9599e2 100%);
+  background-image: linear-gradient(180deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+main {
+  background-color: #fafafa;
+  border-radius: 2px;
+}
+
+textarea {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
 #app {
   margin-left: auto;
   margin-right: auto;
@@ -15,6 +33,7 @@ header {
 
 header h1 {
   text-align: center;
+  padding-top: 15px;
 }
 
 textarea {
@@ -32,6 +51,8 @@ textarea {
 
 .output {
   margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .output img {
@@ -42,10 +63,15 @@ textarea {
   white-space: pre-wrap;
 }
 
+.image {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .output img {
     width: 50%;
   }
+
   .container {
     width: 80%;
   }
@@ -56,6 +82,7 @@ textarea {
     width: 70%;
   }
 }
+
 @media (min-width: 1024px) {
   .container {
     width: 70%;
