@@ -12,11 +12,19 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:update": "jest -u"
   },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
+  },
   "dependencies": {
     "cross-env": "^5.0.5",
+    "enzyme": "^2.9.1",
+    "jest": "^20.0.4",
     "marked": "^0.3.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -40,7 +48,9 @@
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "7.3.0",
     "flow-bin": "^0.54.0",
+    "jest-serializer-enzyme": "^1.0.0",
     "prettier": "^1.6.1",
+    "react-test-renderer": "^15.6.1",
     "webpack-dev-server": "^2.7.1"
   }
 }
