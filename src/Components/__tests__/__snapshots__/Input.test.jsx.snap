@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<textarea
+  className="input"
+  name="input-window"
+  onChange={[Function]}
+  value=""
+/>
+`;
